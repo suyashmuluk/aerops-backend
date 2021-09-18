@@ -11,13 +11,16 @@ emailRouter
   })
   .post(cors.cors, (req, res, next) => {
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "smtp-mail.outlook.com",
       port: 587,
       secure: false,
       auth: {
         user: "suyashmuluk@outlook.com",
         pass: "Anamik@1998",
         // wbafhgoywwcvpigu
+      },
+      tls: {
+        ciphers: "SSLv3",
       },
     });
 
