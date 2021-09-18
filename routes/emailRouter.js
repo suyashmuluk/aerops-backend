@@ -15,7 +15,7 @@ emailRouter
       port: 587,
       secure: false,
       auth: {
-        user: "info@aeropsfm.com",
+        user: "pradip.jadhav@aeropsfm.com",
         pass: "Pj110399!",
         // wbafhgoywwcvpigu
       },
@@ -25,8 +25,8 @@ emailRouter
     });
 
     let mailOptions = {
-      from: `"Suyash", "info@aeropsfm.com"`,
-      to: `info@aeropsfm.com`,
+      from: `"Pradip", "pradip.jadhav@aeropsfm.com"`,
+      to: `pradip.jadhav@aeropsfm.com`,
       subject: `You have got message from ${req.body.name} for AEROPS`,
       html: `<div style="font-size: 18px; font-weight: bold; margin-bottom: 8px">${req.body.name}</div><br><div style="margin-bottom: 8px">${req.body.email}</div><div>${req.body.mobile}</div><div style="font-weight: bold; margin-top: 16px; text-align: center; font-size: 24px">${req.body.feedback}</div>`,
     };
