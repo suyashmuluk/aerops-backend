@@ -15,14 +15,15 @@ emailRouter
       port: 587,
       secure: false,
       auth: {
-        user: "suyash.muluk04@gmail.com",
-        pass: "wbafhgoywwcvpigu",
+        user: "suyashmuluk@outlook.com",
+        pass: "Anamik@1998",
+        // wbafhgoywwcvpigu
       },
     });
 
     let mailOptions = {
-      from: `"Suyash", "suyash.muluk04@gmail.com"`,
-      to: `suyash.muluk04@gmail.com`,
+      from: `"Suyash", "suyashmuluk@outlook.com"`,
+      to: `suyashmuluk@outlook.com`,
       subject: `You have got message from ${req.body.name} for AEROPS`,
       html: `<div style="font-size: 18px; font-weight: bold; margin-bottom: 8px">${req.body.name}</div><br><div style="margin-bottom: 8px">${req.body.email}</div><div>${req.body.mobile}</div><div style="font-weight: bold; margin-top: 16px; text-align: center; font-size: 24px">${req.body.feedback}</div>`,
     };
