@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-const whiteList = ["http://localhost:4200"];
+const whiteList = ["http://localhost:4200", "http://www.aeropsfm.com"];
 
 var corsOptionDelegate = (req, callback) => {
   var corsOptions;
