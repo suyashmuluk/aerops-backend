@@ -11,24 +11,23 @@ emailRouter
   })
   .post(cors.cors, (req, res, next) => {
     let transporter = nodemailer.createTransport({
-      host: "smtp-mail.outlook.com",
-      secureConnection: false,
-      port: 587,
-      tls: {
-        ciphers: "SSLv3",
-      },
+      host: "smtpout.secureserver.net",
+      secureConnection: true,
+      port: 465,
       auth: {
-        user: "pradip.jadhav@aeropsfm.com",
+        user: "info@aeropsfm.com",
         pass: "Pj110399!",
-        // wbafhgoywwcvpigu
       },
     });
 
     let mailOptions = {
-      from: `"Pradip", "pradip.jadhav@aeropsfm.com"`,
-      to: `pradip.jadhav@aeropsfm.com`,
+      from: `"AEROPS", "info@aeropsfm.com"`,
+      to: `info@aeropsfm.com`,
       subject: `You have got message from ${req.body.name} for AEROPS`,
-      html: `<div style="font-size: 18px; font-weight: bold; margin-bottom: 8px">${req.body.name}</div><br><div style="margin-bottom: 8px">${req.body.email}</div><div>${req.body.mobile}</div><div style="font-weight: bold; margin-top: 16px; text-align: center; font-size: 24px">${req.body.feedback}</div>`,
+      html: `<div style="font-size: 15px; margin-bottom: 8px">Name: <span style="font-weight: bold; font-size: 16px">${req.body.name}</span></div>
+            <div style="margin-bottom: 8px; font-size: 15px;">Email: ${req.body.email}</div>
+            <div style="margin-bottom: 8px; font-size: 15px;">Mob. No.: ${req.body.mobile}</div>
+            <div style="margin-top: 16px; font-size: 15px">Message: ${req.body.feedback}</div>`,
     };
 
     transporter.sendMail(mailOptions, (err, info) => {
